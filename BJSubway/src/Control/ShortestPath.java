@@ -78,7 +78,7 @@ public class ShortestPath {
 		return null;
 	}
 	
-	public void showShortestPath(ArrayList<Station> path, String filepath) throws IOException {
+		public void showShortestPath(ArrayList<Station> path, String filepath) throws IOException {
 		File f=new File(filepath);
 		FileOutputStream fos1=new FileOutputStream(f);
 		OutputStreamWriter dos1=new OutputStreamWriter(fos1);
@@ -119,7 +119,7 @@ public class ShortestPath {
 					curLineName=this.inLine(nowStation).get(0).getLineName();
 				}
 				else if (nowStation.getChangingStation()==true&&nextStation.getChangingStation()==false){
-					curLineName=this.inLine(nowStation).get(0).getLineName();
+					curLineName=this.inLine(nextStation).get(0).getLineName();
 				}
 				else if(nowStation.getChangingStation()==true&&nextStation.getChangingStation()==true){
 					curLineName=this.isInTheSameLine(nowStation,nextStation);
@@ -156,7 +156,7 @@ public class ShortestPath {
 		dos1.close();
 
 	}
-
+	
 	public void showLine(String lineName,Map<String, Line> lineMap,String filepath) throws IOException {
 		File f=new File(filepath);
 		FileOutputStream fos1=new FileOutputStream(f);
