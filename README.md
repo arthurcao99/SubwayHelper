@@ -1,6 +1,4 @@
 # SubwayHelper
-# 北京地铁线路规划
-仓库代码：
 地铁出行路线规划设计：https://www.cnblogs.com/caolx/p/11558996.html
 
 ## 1.结构概述
